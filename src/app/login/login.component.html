@@ -1,0 +1,62 @@
+
+
+<img class = "bkgd-img" src="../../assets/images/login-background.jpg" alt="">
+
+<div class="pop-up-container">
+  <div class = "row header">
+      <ul class="row">
+        <li class="col-2 col-sm-2 col-md-2 col-lg-2">
+          <img src="../../../assets/images/wipro-logo.png" alt="">
+        </li>
+        <li class="col-1 col-sm-1 col-md-1 col-lg-1 vertical-line">
+          <span></span>
+        </li>
+        <li class="col-5 col-sm-5"><p>Wipro Integrated Learning program</p></li>
+      </ul>
+  </div>
+
+  <div class="login-body">
+    <div class="row input-container">
+      <label class = "col-12 col-sm-12 col-md-12 col-lg-12" for="" *ngIf="!isHide">Sign in with your login details</label>
+      <label class = "col-12 col-sm-12 col-md-12 col-lg-12" for="" *ngIf="isHide && !forgot">Forgot Password</label>
+      <label class = "col-sm-10 col-md-10 col-lg-10 reset-label" for="" *ngIf="isHide && !forgot">
+        <p class="mt-0 mb-0"> we will send you a link to reset your password.</p>
+        <p class="mt-0 mb-0"> Enter Email Address </p> 
+      </label>
+      <label class = "col-12 col-sm-12 col-md-12 col-lg-12" for="" *ngIf="forgot">Change password</label>
+
+      <div class = "col-12 col-sm-12 col-md-12 col-lg-12 input-wrapper">
+      <input class = "col-12 col-sm-12 col-md-12 col-lg-12" placeholder="Email ID" *ngIf="!forgot"  type="text" name="" id="">
+      <span *ngIf="!forgot" class="icon-dummy_profile confirm"></span>
+      </div>
+
+      <div class = "col-12 col-sm-12 col-md-12 col-lg-12 input-wrapper">
+      <input class = "col-12 col-sm-12 col-md-12 col-lg-12" *ngIf="!isHide || forgot" placeholder="Password" type="password">
+      <span class="icon-password "  *ngIf="!isHide || forgot"></span>
+      </div>
+
+      <div class = "col-12 col-sm-12 col-md-12 col-lg-12 input-wrapper">
+      <input  class = "col-12 col-sm-12 col-md-12 col-lg-12" *ngIf="forgot" placeholder="confirm password" type="password">
+      <span class="icon-circle_arrowup" *ngIf="forgot"></span>
+      </div>
+
+      </div>
+      <div class="button-container">
+      <ul class="row">
+        <li class="">
+          <button class="button-bold button" *ngIf="!isHide" (click) = "dashboard()">Login</button>
+          <button class="button-bold button" *ngIf="isHide && !forgot" (click) = "send()">Send</button>
+          <button class="button-bold button" *ngIf="forgot" (click) = "dashboard()">Submit</button>
+        </li>
+        <li class="vertical-line">
+          <span></span>
+        </li>
+        <li class="pswd" for="" *ngIf="!isHide" (click)="forgotPassword()">Forgot Password?</li>
+        <li class="pswd" *ngIf="isHide">Login</li>
+
+      </ul>
+      </div>
+  </div>
+</div>
+
+

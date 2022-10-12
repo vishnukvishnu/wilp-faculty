@@ -1,0 +1,15 @@
+[
+    {
+        "subject": "Computer Architecture (Session 1)",
+        "time": "11:30 - 12:30",
+        "location": "Lotus room, EC2, Bangalore",
+        "reason": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s dummy text of the printing and typesetting industry  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s dummy text of the printing and typesetting industry"
+    },
+    {
+        "subject": "Computer Architecture (Session 2)",
+        "time": "11:30 - 12:30",
+        "location": "Lotus room, EC2, Bangalore",
+        "reason": " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s dummy text of the printing and typesetting industry"
+    }
+
+]

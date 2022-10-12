@@ -1,0 +1,184 @@
+.fluid-container .isHide {
+  display: none;
+}
+
+.fluid-container .isShow {
+  display: block;
+}
+
+.fluid-container .event-header-container {
+  position: relative;
+}
+
+.fluid-container .event-header-container .img-wrapper img {
+  width: 100%;
+  height: 180px;
+}
+
+.fluid-container .event-header-container .content-wrapper {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  color: #fff;
+}
+
+.fluid-container .event-header-container .content-wrapper .image-wrapper {
+  float: left;
+}
+
+.fluid-container .event-header-container .content-wrapper .image-wrapper img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 4px solid #77d2fd;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details {
+  float: left;
+  margin-left: 25px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details h4 {
+  font-size: 18px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul {
+  list-style: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li {
+  padding-bottom: 6px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li .icon {
+  font-size: 20px;
+  position: absolute;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li .icon-email {
+  top: 4px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li .icon-mobile {
+  top: 32px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li .icon-linkedin {
+  top: 59px;
+}
+
+.fluid-container .event-header-container .content-wrapper .instructor-details ul li .label {
+  display: inline-block;
+  padding-left: 35px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details {
+  float: left;
+  margin-left: 25px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details h4 {
+  font-size: 18px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul {
+  list-style: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li {
+  padding-bottom: 6px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .icon {
+  font-size: 20px;
+  position: absolute;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .icon-email {
+  top: 4px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .icon-mobile {
+  top: 32px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .icon-linkedin {
+  top: 63px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .label {
+  display: inline-block;
+  padding-left: 35px;
+}
+
+.fluid-container .event-header-container .content-wrapper .edit-instructor-details ul li .label input {
+  border: none;
+  background: #239FDA;
+  border-bottom: 1px solid #fff;
+  color: white;
+  max-height: 22px;
+  width: 350px;
+}
+
+.fluid-container .event-section-container {
+  background: #fff;
+  width: 96%;
+  margin-left: 2% !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: -25px;
+  height: auto;
+  padding-bottom: 35px;
+}
+
+.fluid-container .event-section-container .icon-edit-wrapper {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #0e3570;
+  border-radius: 50%;
+  right: 50px;
+  top: -25px;
+}
+
+.fluid-container .event-section-container .icon-edit-wrapper .icon-edit {
+  color: white;
+  font-size: 25px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+.fluid-container .event-section-container .title {
+  color: #082247;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-bottom: 0px;
+}
+
+.fluid-container .event-section-container .section-wrapper {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.fluid-container .event-section-container .section-wrapper .content {
+  font-size: 10px;
+  padding-left: 15px;
+  padding-right: 50px;
+  color: #646363;
+}
+
+.fluid-container .event-section-container .edit-wrapper {
+  padding-left: 30px;
+}
+/*# sourceMappingURL=aboutme.component.css.map */

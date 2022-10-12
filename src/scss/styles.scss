@@ -1,0 +1,318 @@
+
+@import './variables';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'Akkurat-Bold';
+    src: url('/assets/fonts/Akkurat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'akkurat-mono';
+    src: url('/assets/fonts/akkurat-mono.ttf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Bold';
+    src: url('/assets/fonts/AkkuratStd-Bold.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-BoldItalic';
+    src: url('/assets/fonts/AkkuratStd-BoldItalic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Italic';
+    src: url('/assets/fonts/AkkuratStd-Italic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Light';
+    src: url('/assets/fonts/AkkuratStd-Light.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-LightItalic';
+    src: url('/assets/fonts/AkkuratStd-LightItalic.otf');
+}
+@font-face {
+    font-family: 'AkkuratStd-Regular';
+    src: url('/assets/fonts/AkkuratStd-Regular.otf');
+}
+
+
+@font-face {
+    font-family: 'Navigation-icons';
+    src:  url('/assets/icons/Navigation-icons.eot?hthupc');
+    src:  url('/assets/icons/App_Icons.eot');
+    src:  url('/assets/icons/App_Icons.woff');
+    src:  url('/assets/icons/Navigation-icons.eot?hthupc#iefix') format('embedded-opentype'),
+      url('/assets/icons/Navigation-icons.ttf?hthupc') format('truetype'),
+      url('/assets/icons/Navigation-icons.woff?hthupc') format('woff'),
+      url('/assets/icons/Navigation-icons.svg?hthupc#Navigation-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Navigation-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  /* Styles overiding bootstrap classes */
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.col-sm-12, .col-md-12, .col-lg-12 {
+    padding:0px !important;
+    }
+.fluid-container {
+      padding:0px !important;
+    }
+button{
+    cursor: pointer;
+}
+    // Font size and family
+h1 {
+    font-family: 'akkurat-mono';
+    font-size:58pt;
+}
+h2 {
+    font-family: 'akkurat-mono';
+    font-size: 48pt;
+}
+h3 {
+    font-family: 'AkkuratStd-Regular';
+    font-size: 34pt;
+}
+h4{
+    font-family: 'AkkuratStd-Regular';
+    font-size: 24pt; 
+}
+h5{
+    font-family: 'AkkuratStd-Regular';
+    font-size: 20pt;
+}
+.subtitle1 {
+    font-family: 'AkkuratStd-Bold';
+    font-size: 16pt;
+}
+.subtitle2 {
+    font-family: 'AkkuratStd-Bold';
+    font-size: 14pt;
+}
+.body1 {
+    font-family: 'AkkuratStd-Regular';
+    font-size: 16pt;
+}
+.body2 {
+    font-family: 'AkkuratStd-Regular';
+    font-size: 12pt;
+}
+.colum-header {
+    font-family: 'AkkuratStd-Regular';
+    font-size: 12pt;
+}
+.padding-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+/* Styles overiding material classes */
+
+.event-section-container .edit-wrapper .mat-input-element::-webkit-input-placeholder {
+    font-size: 10px;
+}
+.edit-wrapper .mat-form-field{
+    padding-left: 0px;
+    font-size: 12px;
+    padding-right: 35px !important;
+    padding-top: 5px !important;
+}
+.edit-input-wrapper input.mat-input-element{
+    line-height: 40px;
+}
+.session-new-wrapper .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0px;
+}
+.session-new-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding-bottom:0px;
+}
+.session-new-wrapper label{
+    color:color(navy-blue) !important;    
+}
+.mat-tab-label-active .mat-tab-label-content {
+  color:color(sky-blue);
+  font-weight: bold;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color:color(sky-blue);
+}
+.mat-tab-label {
+  min-width: 110px !important;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+.mat-dialog-container{
+    padding:0px !important;
+}
+.session-new-wrapper .mat-button-focus-overlay, .mat-button-ripple.mat-ripple {
+    display: none;
+}
+
+.session-new-wrapper .mat-form-field-appearance-legacy .mat-form-field-prefix .mat-icon-button, .mat-form-field-appearance-legacy .mat-form-field-suffix .mat-icon-button:focus{
+    outline: none;
+ }
+ .session-new-wrapper .from-date.mat-form-field-appearance-legacy .mat-form-field-underline {
+    bottom: 1.6em;
+}
+.event-section-container .mat-tab-group .mat-tab-labels {
+    padding-right: 25px;
+  }
+
+ .filter .mat-button-focus-overlay, .mat-button-ripple.mat-ripple {
+    display: none;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    width: 0px !important;
+    visibility: hidden !important;
+}
+.mat-tab-label-active {
+    border-bottom: 2px solid #00A2E0;
+}
+.fiter-scroll {
+    overflow: hidden;
+}
+.session-new-wrapper label .mat-form-field-required-marker{
+    color: color(ruby-red) !important;
+}
+
+
+ //style for pop-over
+.popover-body {
+    min-width:200px;
+}
+.filter .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0px;
+    display: none;
+}
+.filter .example-full-width .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding-bottom:0px;
+}
+.notification .popover {
+  left: -90% !important;
+}
+.notification .popover .arrow {
+  left: 70% !important;
+}
+.filter .mat-datepicker-toggle {
+   margin-right: 10px;
+ }
+ .header-right-content .popover{
+    top: 10px !important;
+  }
+
+// Algn login screen right side
+app-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+//   sliding for shedulesession
+
+  .open-margin .fluid-container{
+    margin-left: 14.8% !important;
+}
+
+
+pagination-controls .ngx-pagination{
+    margin-top: 30px;
+}
+pagination-controls  .ngx-pagination .current{
+    border-radius: 50%;
+}
+
+
+// Pagination icon change
+.ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-next{
+    font-family: 'Navigation-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+
+.ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-next.disabled::after {
+    content: "\e90b" !important;
+}
+
+.ngx-pagination .pagination-next a::after, .ngx-pagination .pagination-previous {
+    font-family: 'Navigation-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+.ngx-pagination .pagination-previous a::before, .ngx-pagination .pagination-previous.disabled::before {
+    content: "\e90a" !important;
+}
+//Media Query For Mobile view
+
+@media only screen and (max-width: 767px) {
+.col-12, .col-11, .col-10, .col-9, 
+.col-8, .col-7, .col-6, .col-5,
+.col-4, .col-3, .col-2, .col-1 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+    .close-width{
+      width: 10.2% !important;
+    }
+    .sidebar{
+      top: 50px !important;
+    }
+    .today-tab-container {
+        margin: 10px 10px !important;
+    }
+    .hidden-xs {
+        display:none;
+      }
+}
+ 
+
+//Media Query For Tablet view
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .col-12, .col-11, .col-10, .col-9, 
+    .col-8, .col-7, .col-6, .col-5,
+    .col-4, .col-3, .col-2, .col-1 {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .cdk-global-overlay-wrapper{
+        align-items: end !important;
+        margin-top: 5%;
+    }
+  }

@@ -1,0 +1,163 @@
+  
+  <div  class="fluid-container close-margin" id = "main-container" [ngClass]="user ? 'open-margin':''">
+    <div class="event-header-container">
+    <div class="img-wrapper">
+      <img src="../assets/images/WILPfaculty-bg-17.png" alt="">
+    </div>
+    <div class="content-wrapper">
+      <p class="body1" >Computer Architecture(Session 1)</p>
+      <div class="row subject-details">
+        <ul>
+              <li>
+              <span class=" icon icon-calendar padding-0"></span>
+              <span class=" padding-0 label" >12Oct 2018 Saturday</span>
+              </li>
+              <li>
+                <span class="icon icon-time padding-0"></span>
+                <span class="padding-0 label" >11:30 - 12:30</span>
+              </li>
+               <li>
+              <span class="icon icon-location padding-0"></span>
+              <span class="padding-0 label">Lotus room, EC2, Bangalore</span>
+            </li>
+          </ul>
+      </div>
+    </div>
+    </div>
+  
+    <div class="event-section-container">
+      <p class ="title body2">Attendance</p>
+
+        <span class="attend-count">50</span>
+          <span  class="absent-count">50</span>
+
+      <mat-tab-group mat-align-tabs="end">
+      
+        <mat-tab label="Attended">
+         <div class="attend-container">
+
+          <div class="row">
+            <div class="col-sm-11">
+           <div class="row search-field">
+                  
+                  <mat-form-field class="example-full-width col-11 col-sm-6 col-md-6 col-lg-6">
+                      <span class="icon-search"></span>
+                    <input matInput placeholder="Search by Name / EMP ID / University ID" >
+                  </mat-form-field>
+                  
+           </div>
+           <div class="attend-details">
+             <div class="row" *ngFor="let attendance of presentData">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-4 img-wrapper">
+                  <img src="../../assets/images/profile.png" alt="">
+                  <p>{{attendance.name}}</p>
+                </div>
+                <div class="col-2 col-sm-2 col-md-1 col-lg-1">
+                    <span class = "icon-tile_view"></span>
+                </div>
+                <div class="col-5 col-sm-2 col-md-3 col-lg-2 present">
+                  <p>{{attendance.attendance}}</p>
+                  <div class="button-switch inter-switch-wrapper">
+                  <input type="checkbox" id="pension-switch" class="switch" checked />
+                  </div>
+                </div>
+             </div>
+            
+          </div>
+           </div>
+           <div class="col-sm-1">
+             <div class="row mt-3 alphabet-wrapper">
+               <div class="col-sm-12"><p class="mb-0 float-right">A</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">B</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">C</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">D</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">E</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">F</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">G</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">I</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">J</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">K</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">L</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">M</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">N</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">O</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">P</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">Q</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">R</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">S</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">T</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">U</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">V</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">W</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">X</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">Y</p></div>
+               <div class="col-sm-12"><p class="mb-0 float-right">Z</p></div>
+             </div>
+           </div>
+
+        </div>
+         </div>
+         
+        </mat-tab>
+        <mat-tab label="Absentees">
+            <div class="attend-container">
+                <div class="row">
+                <div class="col-sm-11">
+                <div class="row search-field">
+                       <mat-form-field class="example-full-width col-sm-6 col-md-6 col-lg-6">
+                         <span class="icon-search"></span>
+                         <input matInput placeholder="Search by Name / EMP ID / University ID" >
+                       </mat-form-field>
+                </div>
+                <div class="attend-details">
+                 
+                  <div class="row" *ngFor="let absent of absentData">
+                     <div class="col-7 col-sm-3 col-md-4 col-lg-4 img-wrapper">
+                       <img src="../../assets/images/profile.png" alt="">
+                       <p>{{absent.name}}</p>
+                     </div>
+                     <div class="col-5 col-sm-3 col-md-3 col-lg-3 present">
+                       <p>{{absent.attendance}}</p>
+                       <div class="button-switch inter-switch-wrapper">
+                       <input type="checkbox" id="pension-switch" class="switch" checked />
+                       </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+                  <div class="col-sm-1">
+                      <div class="row mt-3 alphabet-wrapper">
+                        <div class="col-sm-12"><p class="mb-0 float-right">A</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">B</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">C</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">D</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">E</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">F</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">G</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">I</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">J</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">K</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">L</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">M</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">N</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">O</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">P</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">Q</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">R</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">S</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">T</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">U</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">V</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">W</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">X</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">Y</p></div>
+                        <div class="col-sm-12"><p class="mb-0 float-right">Z</p></div>
+                      </div>
+                    </div>
+
+               </div>
+              </div>
+        </mat-tab>       
+      </mat-tab-group>
+    </div>
+  </div>

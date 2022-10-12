@@ -1,0 +1,219 @@
+.fluid-container .event-header-container {
+  position: relative;
+}
+
+.fluid-container .event-header-container .img-wrapper img {
+  width: 100%;
+  height: 180px;
+}
+
+.fluid-container .event-header-container .content-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.fluid-container .event-header-container .content-wrapper color:color(white)
+.subject-details {
+  font-size: 12px;
+}
+
+.fluid-container .event-header-container .content-wrapper color:color(white)
+.subject-details .col-sm-3, .fluid-container .event-header-container .content-wrapper color:color(white)
+.subject-details .col-sm-2 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.fluid-container .event-section-container {
+  background: #fff;
+  width: 96%;
+  margin-left: 2% !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: -50px;
+  height: auto;
+  padding-bottom: 35px;
+}
+
+.fluid-container .event-section-container .mat-tab-group {
+  padding-top: 16px;
+}
+
+.fluid-container .event-section-container .title {
+  color: #0e3570;
+  font-weight: bold;
+  position: absolute;
+  top: 26px;
+  left: 10px;
+}
+
+/*  Attendence Tab */
+.event-section-container .attend-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6CC24A;
+  position: absolute;
+  right: 175px;
+  top: 30px;
+}
+
+.event-section-container .absent-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6CC24A;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+}
+
+.event-section-container .attend-container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.event-section-container .attend-container .search-field {
+  margin-top: 16px;
+  margin-left: 12px;
+}
+
+.event-section-container .attend-container .attend-details {
+  margin-top: 20px;
+  margin-left: 45px;
+}
+
+.event-section-container .attend-container .attend-details .row {
+  padding-top: 20px;
+}
+
+.event-section-container .attend-container .attend-details .row .img-wrapper img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  float: left;
+}
+
+.event-section-container .attend-container .attend-details .row .img-wrapper p {
+  float: left;
+  margin: 0px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.event-section-container .attend-container .attend-details .row .present p {
+  float: left;
+}
+
+.event-section-container .attend-container .attend-details .row .present .inter-switch-wrapper {
+  float: left;
+}
+
+.event-section-container .attend-container .attend-details .row .icon-calendar {
+  color: #6CC24A;
+}
+
+/* button toogel */
+.button-switch {
+  font-size: 12px;
+  height: 0.875em;
+  margin-bottom: 0.625em;
+  position: relative;
+  width: 7.5em;
+}
+
+.button-switch .lbl-off,
+.button-switch .lbl-on {
+  cursor: pointer;
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1.5em;
+  position: absolute;
+  top: 0.2em;
+  -webkit-transition: opacity 0.25s ease-out 0.1s;
+  transition: opacity 0.25s ease-out 0.1s;
+  text-transform: uppercase;
+}
+
+.button-switch .lbl-off {
+  right: 13.4375em;
+  color: #fff;
+}
+
+.inter-switch-wrapper .lbl-off {
+  right: 4.4375em !important;
+}
+
+.button-switch .lbl-on {
+  color: #fefefe;
+  opacity: 0;
+  left: 0.4375em;
+}
+
+.button-switch .switch {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0;
+  font-size: 1em;
+  left: 8px;
+  line-height: 0;
+  outline: none;
+  position: absolute;
+  top: 5px;
+  width: 0;
+}
+
+.button-switch .switch:before, .button-switch .switch:after {
+  content: '';
+  font-size: 1em;
+  position: absolute;
+}
+
+.button-switch .switch:before {
+  border-radius: 1.25em;
+  background: #6CC24A;
+  height: 1.6em;
+  left: -0.25em;
+  top: -0.1875em;
+  -webkit-transition: background-color 0.25s ease-out 0.1s;
+  transition: background-color 0.25s ease-out 0.1s;
+  width: 3.8em;
+}
+
+.button-switch .switch:after {
+  -webkit-box-shadow: 0 0.0625em 0.375em 0 #646363;
+          box-shadow: 0 0.0625em 0.375em 0 #646363;
+  border-radius: 50%;
+  background: #fefefe;
+  height: 1.2em;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  transition: -webkit-transform 0.25s ease-out 0.1s;
+  -webkit-transition: -webkit-transform 0.25s ease-out 0.1s;
+  transition: transform 0.25s ease-out 0.1s;
+  transition: transform 0.25s ease-out 0.1s, -webkit-transform 0.25s ease-out 0.1s;
+  width: 1.2em;
+}
+
+.button-switch .switch:checked:after {
+  -webkit-transform: translate(2.5em, 0);
+  transform: translate(2.5em, 0);
+}
+
+.button-switch .switch:checked ~ .lbl-off {
+  opacity: 0;
+}
+
+.button-switch .switch:checked ~ .lbl-on {
+  opacity: 1;
+}
+
+.button-switch .switch:checked:before {
+  background: #eb3542;
+}
+/*# sourceMappingURL=attendance.component.css.map */

@@ -1,0 +1,82 @@
+
+@import "../scss/variables";
+
+  /* Styles for sidebar */
+  @media only screen and (max-width: 767px) {
+  .slider-container .open-width {
+    width: 44.8% !important;
+    z-index: 999 !important;
+}
+  }
+  .sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 62px;
+    left: 0;
+    background-color:#fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-top: 1.5px solid color(sky-blue);
+    cursor: pointer;
+  }
+  .sidebar .avtive {
+    background: lightblue;
+  }
+  .sidebar a:hover {
+    background: lightblue;
+  }
+  .slider-menu{
+    font-size: 20px;
+    color:gray;
+  }
+  .menu-items{
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    font-weight: 500;
+    color: black;
+  }
+  .sidebar a {
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    position: relative;
+  }
+  .sidebar a:first-child {
+    border-bottom:2px solid lightgray;
+  }
+
+  .open-width{
+      width:14.8% !important;
+  }
+  .close-width {
+    width: 3.2%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+  .close-margin {
+      margin-left: 3.2%;
+  }
+  #main-container{
+    transition: margin-left .5s;
+    padding-top: 60px !important;
+  }
+
+  .hide{
+    display:none;
+  }
+  .show{
+    display: block;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .close-width {
+      width: 5.2%;
+    }
+    .open-width {
+      width: 17.8% !important;
+  }
+  }

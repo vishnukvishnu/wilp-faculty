@@ -1,0 +1,339 @@
+.fluid-container .event-header-container {
+  position: relative;
+}
+
+.fluid-container .event-header-container .img-wrapper img {
+  width: 100%;
+  height: 180px;
+}
+
+.fluid-container .event-header-container .content-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  color: #fff;
+}
+
+.fluid-container .event-section-container {
+  background: #fff;
+  width: 96%;
+  margin-left: 2% !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-top: -50px;
+  height: auto;
+  padding-bottom: 35px;
+}
+
+.fluid-container .event-section-container .mat-tab-group {
+  padding-top: 16px;
+}
+
+.fluid-container .event-section-container .title {
+  color: #0e3570;
+  font-weight: bold;
+  position: absolute;
+  top: 26px;
+  left: 10px;
+}
+
+/*  Today Tab */
+.today-tab-container {
+  margin: 10px 20px;
+}
+
+.today-tab-container .today-header-section {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 12px !important;
+}
+
+.today-tab-container .today-header-section .date {
+  background: #239FDA;
+}
+
+.today-tab-container .today-header-section .date .row {
+  display: table;
+  color: #fff;
+}
+
+.today-tab-container .today-header-section .date .row .col-sm-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 30px;
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+}
+
+.today-tab-container .today-header-section .date .row .col-sm-10 {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0px;
+}
+
+.today-tab-container .today-header-section .date .row .col-sm-10 p {
+  vertical-align: middle;
+}
+
+.today-tab-container .today-header-section .col-sm-4 {
+  background: #0e3570;
+  color: #fff;
+}
+
+.today-tab-container .today-header-section .col-sm-4 .subject {
+  padding-top: 24px;
+  margin-bottom: 12px;
+  color: #ffda29;
+}
+
+.today-tab-container .today-header-section .col-sm-4 span {
+  font-size: 20px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 {
+  height: 100px;
+  background: #0e3570;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .attend {
+  padding-top: 40px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .attend .icon-team {
+  color: #239FDA;
+  font-size: 20px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .cancel {
+  padding-top: 35px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .cancel button {
+  border: 1px solid #fff;
+  background: #0e3570;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 1px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .qrcode {
+  padding-top: 35px;
+  position: relative;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .qrcode button {
+  background: #6CC24A;
+  border: none;
+  padding-left: 35px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 .qrcode .icon-Code {
+  position: absolute;
+  top: 36px;
+  left: 23px;
+  font-size: 25px;
+}
+
+.today-tab-container .today-header-section .col-sm-6 button {
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.today-tab-container .subject-details {
+  border-bottom: 1px solid #F0F4F7;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.today-tab-container .subject-details p {
+  margin-bottom: 0px;
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #239FDA;
+}
+
+.today-tab-container .subject-details .icon {
+  color: #239FDA;
+  font-size: 24px;
+}
+
+.today-tab-container .subject-details button {
+  background: white;
+  border: 1px solid #d69194;
+  border-radius: 2px;
+  color: #d69194;
+}
+
+/* Upcomming Tab */
+.upcomming-session .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 12px;
+}
+
+.upcomming-session .upcoming-header {
+  font-size: 12px !important;
+  height: 50px;
+  background: #f1f6f7;
+}
+
+.upcomming-session .upcoming-header p {
+  padding-top: 15px;
+  padding-left: 15px;
+  color: #239FDA;
+}
+
+.upcomming-session .upcoming-header .icon-filter {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.upcomming-session .sub-header {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+.upcomming-session .sub-header .icon-calendar {
+  font-size: 24px;
+  color: #239FDA;
+}
+
+.upcomming-session .sub-header p {
+  margin-bottom: 0px;
+  margin-top: 4px;
+  padding-left: 4px;
+}
+
+.upcomming-session .upcomming-subject-details {
+  border-bottom: 1px solid #F0F4F7;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.upcomming-session .upcomming-subject-details p {
+  margin-bottom: 0px;
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #239FDA;
+}
+
+.upcomming-session .upcomming-subject-details .icon {
+  color: #239FDA;
+  font-size: 24px;
+}
+
+.upcomming-session .upcomming-subject-details button {
+  background: white;
+  border: 1px solid #d69194;
+  border-radius: 2px;
+  color: #d69194;
+}
+
+.upcomming-session .upcomming-subject-details .col-sm-1 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.upcomming-session .upcomming-subject-details .col-sm-2 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Canceled Tab */
+.canceled-session .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 12px;
+}
+
+.canceled-session .upcoming-header {
+  font-size: 12px !important;
+  height: 50px;
+  background: #f1f6f7;
+}
+
+.canceled-session .upcoming-header p {
+  padding-top: 15px;
+  padding-left: 15px;
+  color: #239FDA;
+}
+
+.canceled-session .upcoming-header .icon-filter {
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+.canceled-session .sub-header {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+.canceled-session .sub-header .icon-calendar {
+  font-size: 24px;
+  color: #239FDA;
+}
+
+.canceled-session .sub-header p {
+  margin-bottom: 0px;
+  margin-top: 4px;
+  padding-left: 4px;
+}
+
+.canceled-session .canceled-subject-details {
+  border-bottom: 1px solid #F0F4F7;
+  padding-top: 30px;
+  padding-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.canceled-session .canceled-subject-details p {
+  margin-bottom: 0px;
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #239FDA;
+}
+
+.canceled-session .canceled-subject-details .icon {
+  color: #239FDA;
+  font-size: 24px;
+}
+
+.canceled-session .canceled-subject-details button {
+  background: white;
+  border: 1px solid #d69194;
+  border-radius: 2px;
+  color: #d69194;
+}
+
+.canceled-session .canceled-subject-details .reason {
+  padding-left: 25px !important;
+  line-height: 30px;
+}
+
+.canceled-session .canceled-subject-details .reason p {
+  color: #000 !important;
+}
+/*# sourceMappingURL=scheduled-session.component.css.map */

@@ -1,0 +1,23 @@
+[
+    {
+        "subject": "Computer Architecture (Session 2)",
+        "time": "11:30 - 12:30",
+        "location": "Lotus room, EC2, Bangalore",
+        "count": "Attending",
+        "status": "Cancel"
+    },
+    {
+        "subject": "Computer Architecture (Session 3)",
+        "time": "1:30 - 2:30",
+        "location": "Lotus room, EC2, Bangalore",
+        "count": "Attending",
+        "status": "Cancel"
+    },
+    {
+        "subject": "Computer Architecture (Session 4)",
+        "time": "3:00 - 5:30",
+        "location": "Lotus room, EC2, Bangalore",
+        "count": "Attending",
+        "status": "Cancel"
+    }
+]

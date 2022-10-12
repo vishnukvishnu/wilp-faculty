@@ -1,0 +1,78 @@
+@import '../../../scss/variables';
+
+.pop-up-container{
+    min-height: 260px;
+    position: relative;
+    margin: 25px !important;
+    font-family: 'AkkuratStd-Regular';
+    .header {
+        p{
+            font-weight: 600;   
+            font-family: 'AkkuratStd-Regular';
+            font-size: 14px;
+    }
+    .icon-close{
+        position: absolute;
+        right: 0px;
+        cursor: pointer;
+        color:color(gray);
+        opacity: .6;
+        font-size: 18px;
+    }
+}
+
+        .login-body{
+            font-family: 'AkkuratStd-Regular';
+            font-size: 12px;
+            input {
+                border-bottom:1px solid color(light-gray);
+                padding-bottom: 8px;
+            }
+
+            .row {
+                padding-bottom: 8px;
+                .date{
+                    padding-left: 0px;
+                }
+                .icon-calendar {
+                    position: absolute;
+                    right: 15px;
+                    font-size: 20px;
+                    bottom: 8px;
+                }
+              
+                .icon-calendar:focus{
+                    outline: none !important;
+                }
+                .time {
+                    padding-left: 0px;
+                }
+                .icon-time{
+                    position: absolute;
+                    right: 5px;
+                    font-size: 20px;
+                    bottom: 8px;
+                }
+               
+              .from-date {
+                padding-left: 0px;
+                padding-right: 30px;
+              }
+            }
+         
+            .button-container{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                button {
+                    text-transform: uppercase;
+                    padding: 8px 20px 5px 20px;
+                    background: color(apple-grean);
+                    border: none;
+                    color: color(white);
+                    font-size: 11px;
+                }
+ 
+        }
+        }
+}

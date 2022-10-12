@@ -1,0 +1,67 @@
+/* Styles for sidebar */
+.sidebar {
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 70px;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-top: 3px solid #239FDA;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 50px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-left: 50px;
+}
+
+.open-width {
+  width: 200px !important;
+}
+
+.close-width {
+  width: 50px;
+}
+
+.open-margin {
+  margin-left: 200px !important;
+}
+
+.close-margin {
+  margin-left: 50px;
+}
+
+#main-container {
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+  padding-top: 60px !important;
+}
+/*# sourceMappingURL=app.component.css.map */

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Akkurat-Bold';
+  src: url("/assets/fonts/Akkurat-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'akkurat-mono';
+  src: url("/assets/fonts/akkurat-mono.ttf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Bold';
+  src: url("/assets/fonts/AkkuratStd-Bold.otf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-BoldItalic';
+  src: url("/assets/fonts/AkkuratStd-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Italic';
+  src: url("/assets/fonts/AkkuratStd-Italic.otf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Light';
+  src: url("/assets/fonts/AkkuratStd-Light.otf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-LightItalic';
+  src: url("/assets/fonts/AkkuratStd-LightItalic.otf");
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Regular';
+  src: url("/assets/fonts/AkkuratStd-Regular.otf");
+}
+

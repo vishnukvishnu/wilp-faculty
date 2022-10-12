@@ -1,0 +1,90 @@
+<header>
+  <div class="header-left-content" (click) = "backHome()">
+      <div class="image-wrapper">
+        <img src = "../../assets/images/wipro-logo.png" />
+          <span></span>
+      </div>
+
+      <div class="image-title">
+          <span></span>
+          <p>Wipro Integrated Learning Program</p>
+      </div>
+
+  </div>
+  <div class="header-right-content">
+        <div class="" [ngClass]="isVissible ? 'overlayy':''" (click)="overlayHide()"></div>
+        <ul>
+            <li class="name" >
+                <p class="first-name">John David</p>
+                <p class="last-name">Faculty</p>
+            </li>
+            <li class="profile" [ngbPopover]="rpofile" (click)="ovelayopen()" placement="bottom">
+                <img src = "../../assets/images/profile-black.jpg" />
+            <svg width="100" height="100" class="half-circle hidden-xs">
+                <circle cx="50" cy="15" r="20" stroke="#00A2E0" stroke-width="2" fill="none" />
+            </svg> 
+            </li>
+            <li class="notification" >
+                <span class="icon-notification" (click)="ovelayopen()" [ngbPopover]="notification" placement="bottom"></span>
+                <span class="badge"><span class="count">50</span></span>
+            </li>
+            <li class="logout" (click)="logout()">
+                <span class="icon-logout"></span>
+            </li>
+        </ul>
+
+      <!-- https://www.npmjs.com/package/angular-tooltips -->
+
+
+      <ng-template #notification class= "notification-popover">
+        <div  (click) = "overlayHide()" >
+        <div class="notification-wrapper">
+            <div class="row">
+                    <p class="col-6 col-sm-6 col-md-6 col-lg-6 day">Today</p>
+                    <p class="col-6 col-sm-6 col-md-6 col-lg-6 time">12.00</p>
+            </div>
+            <div class="row">
+                <p>New session has been created by Jhon David</p>
+            </div>
+        </div>
+        <div class="notification-wrapper">
+                <div class="row">
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 day">Today</p>
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 time">12.00</p>
+                </div>
+                <div class="row">
+                    <p>New session has been created by Jhon David</p>
+                </div>
+        </div>
+        <div class="notification-wrapper">
+                <div class="row">
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 day">Today</p>
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 time">12.00</p>
+                </div>
+                <div class="row">
+                    <p>New session has been created by Jhon David</p>
+                </div>
+        </div>
+        <div class="notification-wrapper">
+                <div class="row">
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 day">Today</p>
+                        <p class="col-6 col-sm-6 col-md-6 col-lg-6 time">12.00</p>
+                </div>
+                <div class="row">
+                    <p>New session has been created by Jhon David</p>
+                </div>
+        </div>
+    </div>  
+      </ng-template>
+
+      <ng-template #rpofile >
+          <div class="profile" (click) = "overlayHide()">
+            <p class="content-title">
+                Profile information less than <a class="value">70%</a> Please update.
+            </p>
+            <button class="view-profile" (click) = "aboutme()">view profile</button>
+        </div>
+      </ng-template>
+
+  </div>
+</header>

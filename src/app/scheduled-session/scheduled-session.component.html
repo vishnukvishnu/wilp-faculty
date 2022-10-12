@@ -1,0 +1,334 @@
+ 
+ 
+   <div  class="fluid-container close-margin" id = "main-container" [ngClass]="user ? 'open-margin':''">
+   
+      <div class="event-header-container">
+      <div class="img-wrapper">
+        <img src="../assets/images/WILPfaculty-bg-17.png" alt="">
+      </div>
+      <div class="content-wrapper">
+        <p class = "body1">Scheduled Sessions</p>
+      </div>
+      </div>
+    
+      <div class="event-section-container">
+        <p class ="title body2">Sessions</p>
+        <mat-tab-group mat-align-tabs="end" [ngClass]="isTrue ? 'something':''" >
+
+          <mat-tab label="Today">
+              <div class="today-tab-container">
+                <div class="row today-header-section">
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 date">
+                      <div class="row">
+                          <div class="col-2 col-sm-2 col-md-2 col-lg-2 ">
+                              <span class="icon icon-calendar"></span>
+                          </div>
+                          <div class="col-10 col-sm-10 col-md-10 col-lg-10">
+                              <p>11:30 - 12:30</p>
+                              <p>19 Nov 2018</p>
+                          </div>
+
+                      </div>
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                        <p class="subject">Coputer Architecture (Session 1)</p>
+                        <div class="row">
+                            <span class="col-1 col-sm-1 col-md-1 col-lg-1 icon icon-location"></span>
+                            <p class="col-10 col-sm-10 col-md-10 col-lg-10" >Lotus room, EC2, Bangalore</p>
+                        </div>
+                    </div>
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-7">
+                      <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 attend">
+                            <div class="row">
+                                <span class="col-4 col-sm-2 col-md-2 col-lg-2 icon icon-team"></span>
+                                <p class="col-8 col-sm-5 col-md-5 col-lg-5" >Attending</p>
+                                <p class="col-6 col-sm-4 col-md-4 col-lg-4 attendace-ratio" >50/100</p>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 cancel">
+                              <button (click) = "sessionCancel()">Cancel session</button> 
+                          </div>
+                          <div class="col-4 col-sm-4 col-md-4 col-lg-4 qrcode">
+                            <div class="row">
+                              <span class="icon-Code icon-tile_view"></span>
+                            <button class="col-12 col-sm-12 col-md-11 col-lg-12" (click) = "qrcode()"> generate qr code</button>
+                           </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+               
+                <div class="row subject-details" *ngFor="let today of todayData">
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                      <p class="subject">{{today.subject}}</p>
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                      <div class="row">
+                          <span class="col-5 col-sm-3 col-md-3 col-lg-3 icon icon-time"></span>
+                          <p class="col-7 col-sm-9 col-md-9 col-lg-" >{{today.time}}</p>
+                      </div>
+                       
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                        <div class="row">
+                        <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-location"></span>
+                        <p class="col-10 col-sm-10 col-md-10 col-lg-10">{{today.location}}</p>
+                         </div>
+                    </div>
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                        <div class="row">
+                        <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-team"></span>
+                        <p class="col-9 col-sm-9 col-md-9 col-lg-9">{{today.count}} <span class="denominator">50</span>/100</p>
+                        </div>
+                    </div>
+                    <div class="col-1 col-sm-1 col-md-1 col-lg-1">
+                       <button>{{today.status}}</button>
+                    </div>
+                </div>
+                
+                <div class="col-sm2"></div>
+              </div>
+          </mat-tab>
+          <mat-tab label="Upcoming"> 
+              <div class="upcomming-session">
+
+                  <div class="row upcoming-header">
+                      <p>Upcomming session list</p>
+                      <span class="icon-filter" (click)="filter()"></span>
+                    <!-- Filter pop-over -->
+                    <div class="" [ngClass]="isVissible ? 'overlayy':''" (click)="overlayHide()" ></div>
+                    <div class="filter " [ngClass]="isVissible ? 'filter-visible':'filter-hidden'">
+                      <div class="row">
+
+                        <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 from-date example-full-width">
+                          <input matInput [matDatepicker]="valtopicker" placeholder="From Date">
+                          <mat-datepicker-toggle matSuffix [for]="valtopicker">
+                            <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                          </mat-datepicker-toggle>
+                          <mat-datepicker #valtopicker></mat-datepicker>
+                        </mat-form-field>
+
+                        <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 to-date example-full-width">
+                          <input matInput [matDatepicker]="valpicker" placeholder="To Date">
+                          <mat-datepicker-toggle matSuffix [for]="valpicker">
+                            <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                          </mat-datepicker-toggle>
+                          <mat-datepicker #valpicker></mat-datepicker>
+                        </mat-form-field>
+
+                      </div>
+                      <button class="view-profile" (click)="overlayHide()">Apply</button>
+                    </div>
+                    </div>
+                    
+                    <div *ngFor="let item of collection | paginate: { itemsPerPage: 2, currentPage: p }">
+                    <div class="row sub-header">
+                        <span class="icon-calendar"></span>
+                        <p>10 oct 2018 Saturday</p>
+                    </div>
+
+                    <div class="row upcomming-subject-details" *ngFor="let upcomming of upcommingData">
+                      <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                        <p class="subject">{{upcomming.subject}}</p>
+                      </div>
+                      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                        <div class="row">
+                            <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-time"></span>
+                            <p class="col-10 col-sm-10 col-md-10 col-lg-10" >{{upcomming.time}}</p>
+                        </div>
+                         
+                      </div>
+                      <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                          <div class="row">
+                          <span class="col-1 col-sm-1 col-md-1 col-lg-1 icon icon-location"></span>
+                          <p class="col-10 col-sm-10 col-md-10 col-lg-10">{{upcomming.location}}</p>
+                           </div>
+                      </div>
+                      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                          <div class="row">
+                          <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-team"></span>
+                          <p class="col-9 col-sm-9 col-md-9 col-lg-9">{{upcomming.count}} <span class="denominator">50</span>/100</p>
+                          </div>
+                      </div>
+                      <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                         <button>{{upcomming.status}}</button>
+                      </div>
+                    </div>
+
+                    </div>
+                    <pagination-controls (pageChange)="p = $event"
+                                      responsive="true"
+                                      previousLabel=""
+                                      nextLabel=""
+                                      
+                                      >
+                    </pagination-controls>
+
+              </div>
+             
+          </mat-tab>
+          <mat-tab label="History"> 
+              <div class="upcomming-session">
+
+                <div class="row upcoming-header">
+                  <p>Session history list</p>
+                  <span class="icon-filter" (click)="filter()"></span>
+                  <!-- Filter pop-over -->
+                  <div class="" [ngClass]="isVissible ? 'overlayy':''" (click)="overlayHide()" ></div>
+                  <div class="filter " [ngClass]="isVissible ? 'filter-visible':'filter-hidden'">
+                    <div class="row">
+
+                      <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 from-date example-full-width">
+                        <input matInput [matDatepicker]="valtopicker1" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="valtopicker1">
+                          <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #valtopicker1></mat-datepicker>
+                      </mat-form-field>
+
+                      <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 to-date example-full-width">
+                        <input matInput [matDatepicker]="valpicker2" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="valpicker2">
+                          <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #valpicker2></mat-datepicker>
+                      </mat-form-field>
+
+                    </div>
+                    <button class="view-profile" (click)="overlayHide()">Apply</button>
+                  </div>
+                </div>
+                  
+                    <div *ngFor="let item of collection | paginate: { itemsPerPage: 2, currentPage: p }">
+                    <div class="row sub-header">
+                        <span class="icon-calendar"></span>
+                        <p>10 oct 2018 Saturday</p>
+                    </div>
+      
+                    <div class="row upcomming-subject-details" *ngFor="let history of historyData">
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                          <p class="subject">{{history.subject}}</p>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                          <div class="row">
+                              <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-time"></span>
+                              <p class="col-10 col-sm-10 col-md-10 col-lg-10" >{{history.time}}</p>
+                          </div>
+                           
+                        </div>
+                        <div class="col-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="row">
+                            <span class="col-1 col-sm-1 col-md-1 col-lg-1 icon icon-location"></span>
+                            <p class="col-10 col-sm-10 col-md-10 col-lg-10">{{history.location}}</p>
+                             </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                            <div class="row">
+                            <span class="col-2 col-sm-2 col-md-2 col-lg-2 icon icon-team"></span>
+                            <p class="col-10 col-sm-10 col-md-10 col-lg-10">{{history.status}} <span class="denominator">50</span>/100</p>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2">
+                           <button (click) = "attendance()">{{history.status}}</button>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <pagination-controls (pageChange)="p = $event"
+                    responsive="true"
+                    previousLabel=""
+                    nextLabel="" >
+                    </pagination-controls>
+
+                </div>
+
+          </mat-tab>
+          <mat-tab label="Cancelled"> 
+              <div class="canceled-session">
+
+                <div class="row upcoming-header">
+                  <p>Cancelled Session list</p>
+                  <span class="icon-filter" (click)="filter()"></span>
+                  <!-- Filter pop-over -->
+                  <div class="" [ngClass]="isVissible ? 'overlayy':''" (click)="overlayHide()" ></div>
+                  <div class="filter " [ngClass]="isVissible ? 'filter-visible':'filter-hidden'">
+                    <div class="row">
+
+                      <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 from-date example-full-width">
+                        <input matInput [matDatepicker]="valtopicker3" placeholder="From Date">
+                        <mat-datepicker-toggle matSuffix [for]="valtopicker3">
+                          <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #valtopicker3></mat-datepicker>
+                      </mat-form-field>
+
+                      <mat-form-field class="col-12 col-sm-12 col-md-12 col-lg-12 to-date example-full-width">
+                        <input matInput [matDatepicker]="valpicker4" placeholder="To Date">
+                        <mat-datepicker-toggle matSuffix [for]="valpicker4">
+                          <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #valpicker4></mat-datepicker>
+                      </mat-form-field>
+
+                    </div>
+                    <button class="view-profile" (click)="overlayHide()">Apply</button>
+                  </div>
+                </div>
+
+                  <div  *ngFor="let item of collection | paginate: { itemsPerPage: 2, currentPage: p }">
+                    <div class="row sub-header">
+                        <span class="icon-calendar"></span>
+                        <p>10 oct 2018 Saturday</p>
+                    </div>
+      
+                    <div class="row cancelled-subject-details" *ngFor="let cancel of cancelData">
+                        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
+                          <p class="subject">{{cancel.subject}}</p>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
+                          <div class="row">
+                              <span class="col-1 col-sm-1 col-md-1 col-lg-1 icon icon-time"></span>
+                              <p class="col-10 col-sm-10 col-md-10 col-lg-10" >{{cancel.time}}</p>
+                          </div>
+                           
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-3 col-lg-3">
+                            <div class="row">
+                            <span class="col-1 col-sm-1 col-md-1 col-lg-1 icon icon-location"></span>
+                            <p class="col-10 col-sm-10 col-md-10 col-lg-10">{{cancel.location}}</p>
+                             </div>
+                        </div>
+                        <div class = "col-12 col-sm-12 col-md-12 col-lg-12 reason">
+                            <div class="row">
+                            <span class = "col-2 col-sm-1 col-md-1 col-lg-1 reason-title">Reason - </span>
+                            <p class = "col-10 col-sm-11 pl-0 col-md-11 col-lg-11 reason-details ellipsis">
+                            
+                           <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                              dummy text of the printing and typesetting industry
+                            </span>
+                            <span class="more" (click) = "more()" *ngIf = "!showMore">more..</span>
+                            <span *ngIf = "showMore">
+                              Ipsum is simply dummy text of the printing and typesetting industry.
+                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s dummy
+                              text of the printing and typesetting industry
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+    
+                  </div>
+                  <pagination-controls (pageChange)="p = $event"
+                  responsive="true"
+                  previousLabel=""
+                  nextLabel="" >
+                  </pagination-controls>
+                  
+              </div>
+          </mat-tab>
+    
+        </mat-tab-group>
+      </div>
+    </div>

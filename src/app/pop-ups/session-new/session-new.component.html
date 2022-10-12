@@ -1,0 +1,42 @@
+
+<div class="pop-up-container">
+    <div class = "row header">
+       <p class="body2">New Session Creation</p>
+       <span class="icon-close" (click) = "oncloseConfirm()"></span>
+    </div>  
+  
+    <div class="login-body session-new-wrapper">
+        <div class="row">
+          <mat-form-field class="col-sm-6 col-md-6 col-lg-6 from-date example-full-width">
+            <input matInput [matDatepicker]="valtopicker3" placeholder="Date" required>
+            <mat-datepicker-toggle matSuffix [for]="valtopicker3">
+                <mat-icon matDatepickerToggleIcon><span class="icon-calendar"></span></mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #valtopicker3></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="time example-full-width col-sm-6 col-md-6 col-lg-6">
+                <input matInput placeholder="Time" value="" required>
+                <span class="icon-time"></span>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field class="example-full-width col-sm-12 col-md-12 col-lg-12">
+                <input matInput placeholder="Coputer Architecture(Session 2)" value="">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field class="example-full-width col-sm-12 col-md-12 col-lg-12">
+                <input matInput placeholder="Remarks" value="">
+            </mat-form-field>
+        </div>
+
+        <div class="button-container">
+            <button class="button-bold button" >submit</button>
+        </div>
+    </div>
+  </div>
+  
+  

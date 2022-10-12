@@ -1,0 +1,156 @@
+@import '../../scss/variables';
+
+.bkgd-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.pop-up-container{
+  width: 400px;
+  position: absolute;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: white;
+  margin-left: 25%;
+  font-family: 'AkkuratStd-Regular';
+}
+
+@media (max-width: 768px) { 
+  .pop-up-container {
+      margin-left: 0% !important;
+      margin-right: 5% !important;
+      width: 340px;
+  }    
+}
+
+
+.pop-up-container{
+  padding: 35px;
+    .header{
+        margin-top: 20px;
+      ul 
+      {
+        padding-left: 0px;
+          li{
+          list-style-type: none;
+          display: inline-block;
+          padding: 0px;
+         
+          img {
+            width: 60px;
+          }
+          p{
+            font-size: 10px;
+            margin-left: 12px;
+            margin-top: 10px;
+            font-weight: 500;
+            line-height: 12px;
+          }
+      }
+      li.vertical-line{
+        text-align: center;
+          span{
+            border: 1px solid color(light-gray);
+            height: 38px;
+            display: inline-block;
+            margin-top: 5px;
+            margin-left: 24px;
+          }
+      }
+    }
+    }
+
+    .login-body{
+      margin-top: 35px;
+        .input-container{
+                position: relative;
+            label {
+                margin-bottom:16px;
+                font-size: 11px;
+                font-weight: 500;
+                color:color(student-navy-blue);
+            }
+          .reset-label{
+            color: black;
+            padding-left: 0px;
+          }
+          .input-wrapper{
+            position: relative;
+            input{
+              margin-bottom:10px;
+              border: 1px solid #d6d6d6;
+              font-size: 11px;
+              padding:4px 0px 6px 25px !important;
+            }
+            input::placeholder{
+              font-size: 11px;
+              color:color(gray);
+            }
+            .icon-password {
+              position:absolute;
+              top: 5px;
+              left: 2px;
+              font-size: 15px;
+            }
+            .icon-dummy_profile{
+              position:absolute;
+              top: 5px;
+              left: 2px;
+              font-size: 15px;
+            }
+            .icon-circle_arrowup{
+              position:absolute;
+              top: 5px;
+              left: 2px;
+              font-size: 15px;
+            }
+          }
+
+        }
+
+        .button-container{
+          margin-top: 5px;
+          margin-bottom: 70px;
+        ul 
+        {
+          padding-left: 0px;
+            li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 3px 0px 0px;
+            button {
+                width: 100%;
+                padding: 5px 22px;
+                background: color(sky-blue);
+                border: none;
+                color:#fff;
+                font-size:9px;
+                text-transform: uppercase;
+            }
+        }
+        .pswd{
+          font-size: 11px;
+          margin-top: 6px;
+          margin-left: 5px;
+        }
+          .pswd:hover {
+            cursor: pointer;
+          }
+        li.vertical-line{
+          text-align: center;
+            span{
+                border: 1px solid color(light-gray);
+                height: 15px;
+                display: inline-block;
+                margin-top: 8px;
+                margin-left: 2px;
+            }
+        }
+      }
+    }
+    }
+}
+
+
+
+
