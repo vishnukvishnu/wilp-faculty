@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/scss/styles.scss",
               "src/scss/icons.scss"
             ],
@@ -97,6 +98,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/scss/styles.scss",
               "src/scss/icons.css"
             ],

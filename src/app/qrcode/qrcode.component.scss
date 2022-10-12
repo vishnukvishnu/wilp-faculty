@@ -170,7 +170,7 @@
 
 // Style for header section
 
-@import "/../../scss/variables";
+// @import "/../../scss/variables";
 
 
 /* HEADER SECTION */
@@ -273,7 +273,7 @@ header{
 }
 
 // Style for pop container
-/deep/.cdk-global-overlay-wrapper .cdk-overlay-pane {
+.cdk-global-overlay-wrapper .cdk-overlay-pane {
   max-width: 100% !important;
 }
 // /deep/.cdk-global-overlay-wrapper {
